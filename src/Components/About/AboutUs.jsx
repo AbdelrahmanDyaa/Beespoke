@@ -140,19 +140,28 @@ const AboutUs = () => {
     {[
       {
         title: "about.clients.categories.interior_design",
-        images: ["/public/1709800408223.svg", "/public/الماجديه.png"],
+        images: [
+          "https://i.ibb.co/ccdmv2zM/Picture.png,",
+
+           "https://i.ibb.co/ns6mdP8R/word.png",
+          ],
       },
       {
         title: "about.clients.categories.real_estate",
-        images: ["/public/realstate.png"],
+        images: ["https://i.ibb.co/chSYk0dW/realstate.png"],
       },
       {
         title: "about.clients.categories.facility_management",
-        images: ["/public/موفي.png", "/public/albani.png"],
+        images: ["https://i.ibb.co/fz5NdPVV/image.png",
+           "https://i.ibb.co/fz6NmR7x/image.png"
+          ],
       },
       {
         title: "about.clients.categories.construction",
-        images: ["/public/rock.png", "/public/rimetrica.png"],
+        images: [
+          "https://i.ibb.co/B0MYCVG/rock.png",
+
+           "https://i.ibb.co/DHFd41Zy/rimetrica.png"],
       },
     ].map((section, index) => (
       <div key={index} className="text-center">
