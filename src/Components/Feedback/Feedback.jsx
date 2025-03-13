@@ -64,7 +64,8 @@ const ComplainForm = () => {
     };
 
     return (
-        <div className="bg-[#121212] m-8 text-[#e5d5c5] min-h-screen flex items-center justify-center p-6">
+        <div className="bg-[#121212] m-8 text-[#e5d5c5] h-auto min-h-screen flex items-center justify-center p-6 pt-12 overflow-hidden">
+
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}

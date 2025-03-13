@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import "swiper/css/pagination";
 import { useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const services = [
     { id: 1, src: "https://i.ibb.co/4qtRkwj/Bespoke-Spaces-Company-Profile-2.jpg", key: "services3.real_estate", path: "/services/real_estate_live" },
@@ -29,18 +30,30 @@ const ServicesSlider = () => {
     };
 
     return (
-        <section className="bg-[#121212] text-[#e5d5c5] py-20 px-6 flex justify-center">
+        <section className="bg-[#121212] text-[#e5d5c5] py-20 px-6 flex justify-center relative">
             <div className="max-w-7xl w-full text-start relative">
                 <h2 className="text-3xl font-oswald mb-6">{t("services3.title")}</h2>
+
+                {/* أسهم التنقل مع جعلها Responsive */}
+                <button className="swiper-button-prev-custom absolute top-1/2 left-0 md:left-0 lg:left-[-10px] xl:left-[-38px] z-10 transform -translate-y-1/2 text-[#d1b887] hover:text-[#e5d5c5] transition">
+                    <ChevronLeft size={40} />
+                </button>
+                <button className="swiper-button-next-custom absolute top-1/2 right-0 md:right-0 lg:right-[-10px] xl:right-[-38px] z-10 transform -translate-y-1/2 text-[#d1b887] hover:text-[#e5d5c5] transition">
+                    <ChevronRight size={40} />
+                </button>
+
                 <Swiper
-                    dir={isRTL ? "rtl" : "rtl"} // Enable RTL if Arabic is selected
+                    dir={isRTL ? "rtl" : "rtl"}
                     spaceBetween={20}
                     slidesPerView={1}
                     breakpoints={{
                         640: { slidesPerView: 2 },
                         1024: { slidesPerView: 3 },
                     }}
-                    navigation={{ rtl: isRTL }} // Adjust navigation for RTL
+                    navigation={{
+                        prevEl: ".swiper-button-prev-custom",
+                        nextEl: ".swiper-button-next-custom",
+                    }}
                     autoplay={{ delay: 3000, disableOnInteraction: false }}
                     modules={[Navigation, Autoplay]}
                     className="w-full"
