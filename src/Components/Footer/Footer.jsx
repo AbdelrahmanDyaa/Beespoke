@@ -24,7 +24,6 @@ const Footer = () => {
                     <h3 className="text-2xl font-semibold mb-4 text-[#8c826d]">{t("footer.contact_us")}</h3>
                     <p className="text-[#bab09b]">{t("footer.email")}: info@bespokehomes.art</p>
                     <p className="text-[#bab09b]">{t("footer.phone")}: +966 55 8132 555</p>
-
                     <Link to="/contact-us" className="mt-3 inline-block text-[#8c826d] hover:underline">
                         {t("footer.get_in_touch")}
                     </Link>

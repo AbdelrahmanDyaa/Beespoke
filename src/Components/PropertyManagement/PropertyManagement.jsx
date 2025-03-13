@@ -54,26 +54,28 @@ const PropertyFacilityManagement = () => {
 
               {/* Maintenance List (if applicable) */}
               {key === "maintenanceOperations" && (
-                <ul className="mt-6 text-left text-gray-300 list-disc pl-6">
-                  {[
-                    "elevators",
-                    "generators",
-                    "hvac",
-                    "fireSafety",
-                    "plumbing",
-                    "electrical",
-                    "cctv",
-                    "wasteManagement",
-                    "security",
-                    "cleaning",
-                    "pestControl"
-                  ].map((item) => (
-                    <li key={item} className="hover:text-[#d1b887] transition">
-                      {t(`propertyFacilityManagement.maintenanceOperations.list.${item}`)}
-                    </li>
-                  ))}
-                </ul>
-              )}
+  <ul className="mt-6 text-left text-gray-300 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 list-[square] pl-6">
+    {[
+      "elevators",
+      "generators",
+      "hvac",
+      "fireSafety",
+      "plumbing",
+      "electrical",
+      "cctv",
+      "wasteManagement",
+      "security",
+      "cleaning",
+      "pestControl"
+    ].map((item) => (
+      <li key={item} className="hover:text-[#d1b887] transition list-inside">
+        {t(`propertyFacilityManagement.maintenanceOperations.list.${item}`)}
+      </li>
+    ))}
+  </ul>
+)}
+
+
             </motion.div>
           ))}
         </div>

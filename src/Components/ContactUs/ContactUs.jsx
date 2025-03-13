@@ -56,7 +56,7 @@ const ContactUs = () => {
               {t("contact.title")}
             </h2>
             <p className="mb-2">
-              <strong>{t("contact.addressLabel")}:</strong> Uthman Al-Qadi, 12393 Riyadh, Saudi Arabia
+              <strong>{t("contact.addressLabel")}:</strong> Riyadh, Saudi Arabia
             </p>
             <p className="mb-2">
               <strong>{t("contact.callLabel")}:</strong> +966 55 8132 555

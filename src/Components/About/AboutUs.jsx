@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 
 const heroImage = "https://i.ibb.co/7xZ7hy1j/Bespoke-Spaces-Company-Profile-5.jpg";
 
+
+
 const AboutUs = () => {
   const { t } = useTranslation();
   const [isExpanded, setIsExpanded] = useState(false);
@@ -99,7 +101,7 @@ const AboutUs = () => {
       transition={{ duration: 0.6 }}
       className="bg-[#2a2a2a] text-[#e5d5c5] p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300"
     >
-      <h3 className="text-2xl font-semibold text-[#8c826d] mb-4">
+      <h3 className="text-xl font-semibold text-[#8c826d] mb-4 text-center">
         {t(`about.values.labels.${index}`)}
       </h3>
       <p>{value}</p>
@@ -127,8 +129,7 @@ const AboutUs = () => {
       ))}
 
 
-   {/* our clients */}  
-   
+   {/* our clients */}   
    <section className="mb-10 text-center">
   {/* عنوان القسم */}
   <h2 className="text-4xl text-[#8c826d] mb-12 tracking-wide font-bold uppercase">
@@ -140,28 +141,19 @@ const AboutUs = () => {
     {[
       {
         title: "about.clients.categories.interior_design",
-        images: [
-          "https://i.ibb.co/ccdmv2zM/Picture.png,",
-
-           "https://i.ibb.co/ns6mdP8R/word.png",
-          ],
+        images: ["https://i.ibb.co/tpq18rbF/image.png", "https://i.ibb.co/nq2p4JTK/word.png"],
       },
       {
         title: "about.clients.categories.real_estate",
-        images: ["https://i.ibb.co/chSYk0dW/realstate.png"],
+        images: ["https://i.ibb.co/XfT4WZD7/realstate.png"],
       },
       {
         title: "about.clients.categories.facility_management",
-        images: ["https://i.ibb.co/fz5NdPVV/image.png",
-           "https://i.ibb.co/fz6NmR7x/image.png"
-          ],
+        images: ["https://i.ibb.co/Y40Kcffg/image.png", "https://i.ibb.co/fYd6g6V2/albani.png"],
       },
       {
         title: "about.clients.categories.construction",
-        images: [
-          "https://i.ibb.co/B0MYCVG/rock.png",
-
-           "https://i.ibb.co/DHFd41Zy/rimetrica.png"],
+        images: ["https://i.ibb.co/h6vsFHH/rock.png", "https://i.ibb.co/HT0x7gHQ/rimetrica.png"],
       },
     ].map((section, index) => (
       <div key={index} className="text-center">

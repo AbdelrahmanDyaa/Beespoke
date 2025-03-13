@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        oswald: ["Oswald", "sans-serif"],
-        playfair: ["Playfair Display", "sans-serif"],
+        oswald:  ['Poppins', 'sans-serif'],
+        playfair: ['Roboto', 'sans-serif'],
       },
       fontWeight: {
         light: 300,
