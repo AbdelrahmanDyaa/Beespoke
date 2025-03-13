@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,6 +9,12 @@ const Navbar = () => {
   const { i18n, t } = useTranslation();
   const location = useLocation();
   const isArabic = i18n.language === "ar";
+
+  // Set the document direction dynamically
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+    document.documentElement.dir = "rtl"; // Force RTL in both Arabic and English
+  }, [i18n.language]);
 
   // Define menu items
   const menuItems = [
@@ -32,7 +37,6 @@ const Navbar = () => {
   const toggleLanguage = () => {
     const newLang = isArabic ? "en" : "ar";
     i18n.changeLanguage(newLang);
-    document.documentElement.lang = newLang;
   };
 
   // Handle menu item click to close dropdown & mobile menu
@@ -43,7 +47,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-[#0C0C0C] py-4 px-6 fixed w-full top-0 flex items-center justify-between text-white z-50 font-oswald shadow-md h-24">
+    <nav className="bg-[#0C0C0C] py-4 px-6 fixed w-full top-0 flex items-center justify-between text-white z-50 font-oswald shadow-md h-24 rtl:flex-row-reverse">
       {/* Left Section: Logo */}
       <div className="flex items-center gap-4">
         <Link to="/" className="h-16 flex items-center" onClick={handleNavClick}>
@@ -52,28 +56,26 @@ const Navbar = () => {
             alt="Logo"
             className="w-32 md:w-40 h-auto object-contain inline-block transition-transform duration-300 hover:scale-105"
           />
-
         </Link>
-
       </div>
 
       {/* Center Section: Desktop Menu */}
-      <ul className={`hidden md:flex space-x-10 lg:space-x-14 text-xl items-center mx-auto ${isArabic ? "rtl:space-x-reverse" : ""}`}>
+      <ul className={`hidden md:flex space-x-10 lg:space-x-14 text-xl items-center mx-auto rtl:space-x-reverse`}>
         {menuItems.map(({ key, path, subMenu }) => (
           <li key={key} className="group relative">
             {subMenu ? (
               <>
                 <button
-                  className={`relative transition duration-300 text-[#bab09b] 
+                  className="relative transition duration-300 text-[#bab09b] rtl:text-right
                     after:content-[''] after:absolute after:left-0 after:bottom-[-4px] 
                     after:w-0 after:h-[3px] after:bg-[#bab09b] after:transition-all 
-                    after:duration-300 group-hover:after:w-full group-hover:text-[#8c826d]`}
+                    after:duration-300 group-hover:after:w-full group-hover:text-[#8c826d]"
                   onClick={() => setDropdown(dropdown === key ? null : key)}
                 >
-                  {t(key)} <span className="text-sm"></span>
+                  {t(key)}
                 </button>
                 {dropdown === key && (
-                  <ul className="absolute left-0 mt-2 w-48 bg-[#222] text-white shadow-lg rounded-lg py-2">
+                  <ul className="absolute left-0 mt-2 w-48 bg-[#222] text-white shadow-lg rounded-lg py-2 rtl:text-right rtl:left-auto rtl:right-0">
                     {subMenu.map(({ key, path }) => (
                       <li key={key}>
                         <Link to={path} className="block px-4 py-2 text-sm hover:bg-[#8c826d] transition" onClick={handleNavClick}>
@@ -87,7 +89,7 @@ const Navbar = () => {
             ) : (
               <Link
                 to={path}
-                className={`relative transition duration-300 text-[#bab09b] 
+                className={`relative transition duration-300 text-[#bab09b] rtl:text-right
                   ${location.pathname === path ? "text-[#8c826d] after:w-full" : ""}
                   after:content-[''] after:absolute after:left-0 after:bottom-[-4px] 
                   after:w-0 after:h-[3px] after:bg-[#bab09b] after:transition-all 
@@ -102,7 +104,7 @@ const Navbar = () => {
       </ul>
 
       {/* Right Section: Mobile Menu & Language Toggle */}
-      <div className="flex items-center gap-6">
+      <div className="flex items-center gap-6 rtl:flex-row-reverse">
         {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button className="text-4xl text-[#bab09b] transition-transform duration-300" onClick={() => setIsOpen(!isOpen)}>
@@ -129,14 +131,14 @@ const Navbar = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="absolute top-24 left-0 w-full bg-[#0C0C0C] text-center py-4 shadow-lg md:hidden"
+          className="absolute top-24 left-0 w-full bg-[#0C0C0C] text-center py-4 shadow-lg md:hidden rtl:text-right"
         >
           {menuItems.map(({ key, path, subMenu }) => (
             <div key={key}>
               {subMenu ? (
                 <>
                   <button className="block w-full text-xl text-[#bab09b] py-4 hover:text-[#8c826d] transition" onClick={() => setDropdown(dropdown === key ? null : key)}>
-                    {t(key)} <span className="text-sm">↓</span>
+                    {t(key)}
                   </button>
                   {dropdown === key && (
                     <div className="bg-[#222] rounded-md py-2">
