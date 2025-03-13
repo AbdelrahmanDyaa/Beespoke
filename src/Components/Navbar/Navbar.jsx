@@ -47,8 +47,13 @@ const Navbar = () => {
       {/* Left Section: Logo */}
       <div className="flex items-center gap-4">
         <Link to="/" className="h-16 flex items-center" onClick={handleNavClick}>
-          <img src={logo} alt="Logo" className="w-40 h-auto transition-transform duration-300 hover:scale-105" />
+          <img
+            src={logo}
+            alt="Logo"
+            className="w-32 md:w-40 h-auto object-contain inline-block transition-transform duration-300 hover:scale-105"
+          />
         </Link>
+
       </div>
 
       {/* Center Section: Desktop Menu */}
