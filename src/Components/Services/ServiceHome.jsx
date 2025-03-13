@@ -33,7 +33,7 @@ const ServicesSlider = () => {
             <div className="max-w-7xl w-full text-start relative">
                 <h2 className="text-3xl font-oswald mb-6">{t("services3.title")}</h2>
                 <Swiper
-                    dir={isRTL ? "rtl" : "ltr"} // Enable RTL if Arabic is selected
+                    dir={isRTL ? "rtl" : "rtl"} // Enable RTL if Arabic is selected
                     spaceBetween={20}
                     slidesPerView={1}
                     breakpoints={{

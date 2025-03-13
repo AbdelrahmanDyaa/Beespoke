@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import logo from "../../../public/bevel-anim-once.svg"; // Adjust path if needed
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,10 +48,11 @@ const Navbar = () => {
       <div className="flex items-center gap-4">
         <Link to="/" className="h-16 flex items-center" onClick={handleNavClick}>
           <img
-            src={logo}
+            src="https://i.ibb.co/PGZBmPr1/accent1.png"
             alt="Logo"
             className="w-32 md:w-40 h-auto object-contain inline-block transition-transform duration-300 hover:scale-105"
           />
+
         </Link>
 
       </div>
