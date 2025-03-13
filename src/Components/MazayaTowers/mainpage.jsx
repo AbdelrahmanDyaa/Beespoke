@@ -24,7 +24,12 @@ const MainPage = () => {
           </motion.h3>
 
           {/* Divider */}
-          <div className="w-20 h-1 bg-[#f8c069] mx-auto mb-8 rounded-full"></div>
+          <motion.div
+            className="w-20 h-1 bg-[#f8c069] mx-auto mb-8 rounded-full"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          ></motion.div>
 
           {/* Content Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -35,24 +40,40 @@ const MainPage = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
             >
-              <img
+              <motion.img
                 src="https://i.ibb.co/Lz689HrH/jpg.webp"
                 alt="Mazaya Towers"
-                className="rounded-xl shadow-md w-full max-w-md"
+                className="rounded-xl shadow-md w-full max-w-md transition-transform duration-300 hover:scale-105"
+                whileHover={{ scale: 1.05 }}
               />
             </motion.div>
 
             {/* Right Side - Description */}
             <div>
-              <p className="text-lg text-[#dcdcdc] leading-relaxed tracking-wide">
+              <motion.p
+                className="text-lg text-[#dcdcdc] leading-relaxed tracking-wide"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
                 {t("mazaya_description_1")}
-              </p>
-              <p className="text-lg text-[#dcdcdc] leading-relaxed tracking-wide mt-4">
+              </motion.p>
+              <motion.p
+                className="text-lg text-[#dcdcdc] leading-relaxed tracking-wide mt-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+              >
                 {t("mazaya_description_2")}
-              </p>
-              <p className="text-lg text-[#dcdcdc] leading-relaxed tracking-wide mt-4">
+              </motion.p>
+              <motion.p
+                className="text-lg text-[#dcdcdc] leading-relaxed tracking-wide mt-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+              >
                 {t("mazaya_description_3")}
-              </p>
+              </motion.p>
             </div>
           </div>
         </motion.div>
