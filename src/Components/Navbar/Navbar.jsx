@@ -125,40 +125,56 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          className="absolute top-24 left-0 w-full bg-[#0C0C0C] text-center py-4 shadow-lg md:hidden rtl:text-right"
-        >
-          {menuItems.map(({ key, path, subMenu }) => (
-            <div key={key}>
-              {subMenu ? (
-                <>
-                  <button className="block w-full text-xl text-[#bab09b] py-4 hover:text-[#8c826d] transition" onClick={() => setDropdown(dropdown === key ? null : key)}>
-                    {t(key)}
-                  </button>
-                  {dropdown === key && (
-                    <div className="bg-[#222] rounded-md py-2">
-                      {subMenu.map(({ key, path }) => (
-                        <Link key={key} to={path} className="block py-2 px-6 text-sm text-white hover:bg-[#8c826d] transition" onClick={handleNavClick}>
-                          {t(key)}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </>
-              ) : (
-                <Link to={path} className="block py-4 text-xl text-[#bab09b] hover:text-[#8c826d] transition" onClick={handleNavClick}>
-                  {t(key)}
-                </Link>
+     {/* Mobile Menu */}
+{isOpen && (
+  <motion.div
+    initial={{ opacity: 0, y: -20 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -20 }}
+    className="absolute top-24 left-0 w-full bg-[#0C0C0C] text-center py-6 shadow-lg md:hidden rounded-b-lg"
+  >
+    <div className="flex flex-col items-center w-[85%] mx-auto space-y-4">
+      {menuItems.map(({ key, path, subMenu }) => (
+        <div key={key} className="w-full">
+          {subMenu ? (
+            <>
+              <button
+                className="block w-full text-xl text-[#bab09b] py-3 hover:text-[#8c826d] transition"
+                onClick={() => setDropdown(dropdown === key ? null : key)}
+              >
+                {t(key)}
+              </button>
+              {dropdown === key && (
+                <div className="bg-[#222] rounded-md py-2">
+                  {subMenu.map(({ key, path }) => (
+                    <Link
+                      key={key}
+                      to={path}
+                      className="block py-2 text-lg text-white hover:bg-[#8c826d] transition rounded-md w-full text-center"
+                      onClick={handleNavClick}
+                    >
+                      {t(key)}
+                    </Link>
+                  ))}
+                </div>
               )}
-            </div>
-          ))}
-        </motion.div>
-      )}
+            </>
+          ) : (
+            <Link
+              to={path}
+              className="block w-full py-3 text-xl text-[#bab09b] hover:text-[#8c826d] transition"
+              onClick={handleNavClick}
+            >
+              {t(key)}
+            </Link>
+          )}
+        </div>
+      ))}
+    </div>
+  </motion.div>
+)}
+
+
     </nav>
   );
 };
