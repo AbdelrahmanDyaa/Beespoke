@@ -15,8 +15,8 @@ const InteriorDesign = () => {
 
   return (
     <div className="bg-[#121212] text-[#e5d5c5] font-oswald min-h-screen">
-      {/* Hero Section */}
-      <div className="relative w-full h-[400px] md:h-[450px] lg:h-[500px]">
+      {/* هيدر الصفحة */}
+      <div className="relative w-full h-[450px] md:h-[500px] lg:h-[550px]">
         <motion.img
           src="https://i.ibb.co/fYx1H9Lk/2.jpg"
           alt="Luxury Interior Design"
@@ -36,25 +36,36 @@ const InteriorDesign = () => {
         </motion.h1>
       </div>
 
-      {/* Steps Section */}
+      {/* قسم الخطوات بتنسيق الـ Timeline */}
       <div className="py-16 px-6 md:px-20 lg:px-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {steps.map((step, index) => (
-            <motion.div
-              key={step.key}
-              className="bg-[#1a1a1a] p-10 rounded-2xl shadow-2xl hover:shadow-[#d1b887] transition-all duration-300 text-center"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, ease: "easeOut", delay: index * 0.2 }}
-            >
-              <h2 className="text-2xl sm:text-3xl text-[#d1b887] font-semibold mb-4">
-                {t(`interior_design.${step.key}`)}
-              </h2>
-              <p className="text-lg text-gray-400 leading-relaxed">
-                {t(`interior_design.${step.description}`)}
-              </p>
-            </motion.div>
-          ))}
+        <div className="relative w-full flex flex-col items-center">
+          {/* الخط الزمني الأفقي */}
+          <div className="absolute top-0 w-full border-t-2 border-[#d1b887] hidden md:block" />
+
+          <div className="flex flex-col md:flex-row items-start justify-between w-full gap-16 mt-0">
+            {steps.map((step, index) => (
+              <motion.div
+                key={step.key}
+                className="relative flex flex-col items-center text-center bg-[#1a1a1a] p-6 md:p-8 rounded-2xl shadow-xl w-72 md:w-80 mt-3"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.3 }}
+              >
+                {/* النقطة الدائرية أعلى المربع */}
+                <div className="absolute w-10 h-10 bg-[#d1b887] rounded-full top-[-30px] left-1/2 transform -translate-x-1/2 border-4 border-[#d1b887]" />
+                
+                {/* عنوان الخطوة */}
+                <h2 className="text-xl md:text-2xl text-[#d1b887] font-semibold mb-3">
+                  {t(`interior_design.${step.key}`)}
+                </h2>
+                
+                {/* وصف الخطوة */}
+                <p className="text-md text-gray-400 leading-relaxed">
+                  {t(`interior_design.${step.description}`)}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
