@@ -327,6 +327,9 @@
   "mazaya_description_3": "By ensuring seamless operations, reducing risks, and optimizing resources, we unlock the full potential of Mazaya Towers, transforming them into well-maintained, high-performing commercial assets.",
   "projects_title": "Projects",
   "mazaya_towers": "Mazaya Towers",
+  "villa_sulaymaniyah": "Al Sulaymaniah Villa",
+  "mazaya_category": "Commercial",
+  "villa_category": "Residential",
   "projects": {
     "title": "Projects",
     "items": {
@@ -336,8 +339,17 @@
       },
       "2": {
         "title": "Al Sulaymaniah Villa",
-        "category": "residential"
+        "category": "Residential"
       }
     }
+  
+
+  },
+  "villa": {
+    "title": "Marvelous Villa in Al Sulimaniyah District",
+    "description": "As you step through the door, a wave of natural light floods the bright and open living space, immediately enveloping you in an atmosphere of sophistication and warmth. The majlis, a true masterpiece of versatility, invites you to effortlessly shape the space to suit any occasion, whether intimate or grand. Surrounding you, luxury sideboards and cabinets in rich brown and olive tones, with their stone-faced panels, offer a timeless elegance, while a carefully curated painting and the Samsung Frame TV, both encased in identical frames, create the illusion of a dual art display. At the center of it all, a bespoke New Zealand wool rug, made exclusively for this space, combined with the handmade metal coffee table, anchor the room with its warmth and understated luxury.",
+    "read_more": "Read More",
+    "read_less": "Read Less"
   }
+
 }

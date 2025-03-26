@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -13,6 +14,8 @@ const images = [
 
 const VillaSlider = () => {
   const [expanded, setExpanded] = useState(false);
+  const { t } = useTranslation(); // Import translation hook
+
   const settings = {
     dots: false,
     infinite: true,
@@ -31,20 +34,14 @@ const VillaSlider = () => {
     ],
   };
 
-  const text = `As you step through the door, a wave of natural light floods the bright and open living space, 
-  immediately enveloping you in an atmosphere of sophistication and warmth. The majlis, a true masterpiece of versatility, 
-  invites you to effortlessly shape the space to suit any occasion, whether intimate or grand. Surrounding you, luxury sideboards and cabinets in rich brown and olive tones,
-  with their stone-faced panels, offer a timeless elegance, while a carefully curated painting and the Samsung Frame TV, both encased in identical frames, create the illusion of a dual art display.
-  At the center of it all, a bespoke New Zealand wool rug, made exclusively for this space, combined with the handmade metal coffee table, anchor the room with its warmth and understated luxury.`;
-  
   return (
     <section className="bg-[#0c0c0c] text-[#e5d5c5] py-12 px-6 flex flex-col items-center">
-      {/* العنوان */}
+      {/* Title */}
       <h2 className="mt-6 text-4xl font-oswald text-center text-[#f8c069] tracking-wide uppercase pt-12">
-        MARVELLOUS VILLA IN AL SULIMANIYAH DISTRICT
+        {t("villa.title")}
       </h2>
 
-      {/* السلايدر */}
+      {/* Slider */}
       <div className="w-full max-w-5xl overflow-hidden">
         <Slider {...settings} className="overflow-hidden">
           {images.map((img, index) => (
@@ -62,15 +59,15 @@ const VillaSlider = () => {
         </Slider>
       </div>
 
-      {/* الوصف مع زر "قراءة المزيد" */}
+      {/* Description with "Read More" button */}
       <p className="text-lg text-[#dcdcdc] leading-relaxed tracking-wide max-w-4xl text-center mt-8">
-        {expanded ? text : `${text.substring(0, 200)}...`}
+        {expanded ? t("villa.description") : `${t("villa.description").substring(0, 200)}...`}
       </p>
       <button
         onClick={() => setExpanded(!expanded)}
         className="mt-4 px-4 py-2 bg-[#f8c069] text-[#0c0c0c] rounded-lg text-sm font-semibold hover:bg-[#e0a856] transition"
       >
-        {expanded ? "Read Less" : "Read More"}
+        {expanded ? t("villa.read_less") : t("villa.read_more")}
       </button>
     </section>
   );

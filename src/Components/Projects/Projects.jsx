@@ -10,7 +10,7 @@ const projects = [
     },
     { 
         id: 2, 
-        title: "Al Sulaymaniah Villa", 
+        title: "villa_sulaymaniyah", // Changed to a translation key
         image: "https://i.ibb.co/m5hqLdt5/Screenshot-342.png",
     },
 ];
