@@ -333,6 +333,10 @@
       "1": {
         "title": "Mazaya Towers",
         "category": "Commercial"
+      },
+      "2": {
+        "title": "Al Sulaymaniah Villa",
+        "category": "residential"
       }
     }
   }

@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 
 const projects = [
     { id: 1, title: "mazaya towers", category: "commercial", image: "https://i.ibb.co/Lz689HrH/jpg.webp" },
+    { id: 2, title: "Al Sulaymaniah Villa", category: "residential", image: "https://i.ibb.co/m5hqLdt5/Screenshot-342.png" },
 ];
 
 const ProjectsSection = () => {

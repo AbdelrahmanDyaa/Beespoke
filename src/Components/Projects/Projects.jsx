@@ -8,6 +8,11 @@ const projects = [
         title: "mazaya_towers", // Translation key instead of hardcoded text
         image: "https://i.ibb.co/Lz689HrH/jpg.webp",
     },
+    { 
+        id: 2, 
+        title: "Al Sulaymaniah Villa", 
+        image: "https://i.ibb.co/m5hqLdt5/Screenshot-342.png",
+    },
 ];
 
 const ProjectsSection = () => {

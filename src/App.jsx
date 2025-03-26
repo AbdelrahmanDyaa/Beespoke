@@ -20,6 +20,7 @@ import TermsAndConditions from "./Components/Terms-Conditions/Terms-Conditions.j
 import NotFound from "./Components/NotFound/NotFound.jsx";
 import ScrollToTop from "./ScrollTop.jsx"; // Ensures the page scrolls to top on navigation
 import MainPage from "./Components/MazayaTowers/mainpage.jsx";
+import AlSulaymaniahVilla from "./Components/AlSulaymaniahVilla/AlSulaymaniahVilla.jsx"; // Added AlSulaymaniahVilla Page
 
 
 const App = () => {
@@ -63,6 +64,7 @@ const App = () => {
                     
                     {/* Projects Sub-Pages */}
                     <Route path="projects/1" element={<MainPage />} />
+                    <Route path="projects/2" element={<AlSulaymaniahVilla/>} />
                    
 
                     {/* 404 Not Found */}
