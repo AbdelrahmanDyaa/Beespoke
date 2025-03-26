@@ -35,7 +35,8 @@
     "property_and_facility_management": "PROPERTY & FACILITY MANAGEMENT",
     "residential": "Residential",
     "commercial": "Commercial",
-    "renovations": "Renovations"
+    "renovations": "Renovations",
+    "complain": "Service Request"
   },
   "about_us2": {
     "title2": "ABOUT US",
@@ -132,23 +133,30 @@
     }
   },
   "complain": {
-    "title": "Complaint Form",
-    "name": "Name",
+    "title": "Service Request",
+    "first_name": "First Name",
+    "last_name": "Last Name",
     "email": "Email",
     "phone": "Phone Number",
-    "subject": "Subject",
-    "complaint": "Enter your complaint here...",
-    "terms": "I agree to the Terms and Conditions.",
-    "submit": "Submit Complaint",
-    "success": "Thank you for submitting your complaint!",
+    "country": "Country",
+    "location": "Location",
+    "select_service": "Select a Service",
+    "real_estate": "Real Estate",
+    "interior_design": "Interior Design",
+    "construction": "Construction",
+    "property_management": "Property Management",
+    "description": "Describe your complaint",
+    "submit": "Submit",
+    "success": "Your complaint has been submitted successfully!",
     "errors": {
-      "name_required": "Name is required",
-      "email_required": "Email is required",
-      "invalid_email": "Invalid email format",
-      "phone_required": "Phone number is required",
-      "invalid_phone": "Phone number must be 11 digits",
-      "subject_required": "Subject is required",
-      "complaint_required": "Complaint is required"
+      "first_name_required": "First name is required.",
+      "last_name_required": "Last name is required.",
+      "invalid_email": "Please enter a valid email address.",
+      "invalid_phone": "Phone number must be 11 digits.",
+      "country_required": "Country is required.",
+      "location_required": "Location is required.",
+      "service_required": "Please select a service.",
+      "description_required": "Please provide a description of your complaint."
     }
   },
   "services": {

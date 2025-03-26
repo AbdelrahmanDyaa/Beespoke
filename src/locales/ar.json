@@ -35,7 +35,8 @@
     "property_and_facility_management": "إدارة الممتلكات والمرافق",
     "residential": "سكني",
     "commercial": "تجاري",
-    "renovations": "التجديدات"
+    "renovations": "التجديدات",
+    "complain": "طلب خدمة"
   },
   "about_us2": {
     "title2": "من نحن",
@@ -132,23 +133,30 @@
     }
   },
   "complain": {
-    "title": "نموذج الشكوى",
-    "name": "الاسم",
+    "title": "طلب خدمة",
+    "first_name": "الاسم الأول",
+    "last_name": "اسم العائلة",
     "email": "البريد الإلكتروني",
     "phone": "رقم الهاتف",
-    "subject": "الموضوع",
-    "complaint": "أدخل شكواك هنا...",
-    "terms": "أوافق على الشروط والأحكام.",
-    "submit": "إرسال الشكوى",
-    "success": "شكرًا لك على تقديم شكواك!",
+    "country": "الدولة",
+    "location": "الموقع",
+    "select_service": "اختر الخدمة",
+    "real_estate": "العقارات",
+    "interior_design": "التصميم الداخلي",
+    "construction": "الإنشاءات",
+    "property_management": "إدارة الممتلكات",
+    "description": "صف مشكلتك",
+    "submit": "إرسال",
+    "success": "تم إرسال شكواك بنجاح!",
     "errors": {
-      "name_required": "الاسم مطلوب",
-      "email_required": "البريد الإلكتروني مطلوب",
-      "invalid_email": "تنسيق البريد الإلكتروني غير صحيح",
-      "phone_required": "رقم الهاتف مطلوب",
-      "invalid_phone": "يجب أن يكون رقم الهاتف مكونًا من 11 رقمًا",
-      "subject_required": "الموضوع مطلوب",
-      "complaint_required": "الشكوى مطلوبة"
+      "first_name_required": "الاسم الأول مطلوب.",
+      "last_name_required": "اسم العائلة مطلوب.",
+      "invalid_email": "يرجى إدخال بريد إلكتروني صالح.",
+      "invalid_phone": "يجب أن يتكون رقم الهاتف من 11 رقمًا.",
+      "country_required": "الدولة مطلوبة.",
+      "location_required": "الموقع مطلوب.",
+      "service_required": "يرجى اختيار الخدمة.",
+      "description_required": "يرجى تقديم وصف لمشكلتك."
     }
   },
   "services": {

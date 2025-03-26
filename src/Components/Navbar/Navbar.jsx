@@ -31,6 +31,7 @@ const Navbar = () => {
     },
     { key: "navbar.projects", path: "/projects" },
     { key: "navbar.contact", path: "/contact-us" },
+    { key: "navbar.complain", path: "/feedback" },
   ];
 
   // Toggle language function

@@ -2,7 +2,6 @@ import { Outlet } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-import FeedbackIcon from "../Feedback/FeedbackIcon";
 
 const Layout = () => {
     const { i18n } = useTranslation();
@@ -14,7 +13,6 @@ const Layout = () => {
         <div className="bg-black text-white">
             <Navbar />
             <Outlet />
-            <FeedbackIcon/>
             <Footer />
         </div>
     );
