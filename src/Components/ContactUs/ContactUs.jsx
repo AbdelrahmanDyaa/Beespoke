@@ -53,22 +53,26 @@ const ContactUs = () => {
           className="max-w-7xl w-full grid md:grid-cols-2 gap-12"
         >
           {/* Google Map */}
+
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="overflow-hidden rounded-lg shadow-lg md:mx-0 mx-auto"
+            className="relative w-full overflow-hidden rounded-lg shadow-lg md:mx-0 mx-auto"
           >
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14944280.62722007!2d55.72943211574409!3d23.87166907340386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15e7b33fe7952a41%3A0x5960504bc21ab69b!2z2KfZhNiz2LnZiNiv2YrYqQ!5e0!3m2!1sar!2seg!4v1740669498824!5m2!1sar!2seg"
-              width="100%"
-              height={550}
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+            <div className="relative w-full h-80 md:h-[500px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1855575.336546754!2d47.943809594340166!3d24.721023435888597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2z2KfZhNix2YrYp9i2INin2YTYs9i52YjYr9mK2Kk!5e0!3m2!1sar!2seg!4v1743261767647!5m2!1sar!2seg"
+                className="absolute top-0 left-0 w-full h-full border-0"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              >
+                
+              </iframe>
+            </div>
           </motion.div>
+
 
           {/* Contact Info & Form */}
           <motion.div

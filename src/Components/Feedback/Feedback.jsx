@@ -14,6 +14,9 @@ const ComplainForm = () => {
     const [location, setLocation] = useState("");
     const [service, setService] = useState("");
     const [description, setDescription] = useState("");
+    const [buildingNum, setBuildingNum] = useState("");  // ✅ رقم المبنى
+    const [floor, setFloor] = useState("");  // ✅ رقم الطابق
+    const [unitNum, setUnitNum] = useState("");  // ✅ رقم الوحدة
     const [submitted, setSubmitted] = useState(false);
     const [errors, setErrors] = useState({});
 
@@ -47,7 +50,10 @@ const ComplainForm = () => {
                 country,
                 location,
                 service,
-                description
+                description,
+                buildingNum,  // ✅ إضافتها لإرسالها عبر البريد
+                floor,  // ✅ إضافتها لإرسالها عبر البريد
+                unitNum,  // ✅ إضافتها لإرسالها عبر البريد
             };
 
             emailjs.send(
@@ -80,6 +86,13 @@ const ComplainForm = () => {
                         <input type="text" placeholder={t("complain.phone")} className="input-field w-full p-3 border border-[#C8AD7E] rounded-lg bg-[#121212] text-white" value={phone} onChange={(e) => setPhone(e.target.value)} />
                         <input type="text" placeholder={t("complain.country")} className="input-field w-full p-3 border border-[#C8AD7E] rounded-lg bg-[#121212] text-white" value={country} onChange={(e) => setCountry(e.target.value)} />
                         <input type="text" placeholder={t("complain.location")} className="input-field w-full p-3 border border-[#C8AD7E] rounded-lg bg-[#121212] text-white" value={location} onChange={(e) => setLocation(e.target.value)} />
+
+                        <div className="grid grid-cols-3 gap-4">
+                            <input type="text" placeholder={t("complain.buildingnum")} className="input-field w-full p-3 border border-[#C8AD7E] rounded-lg bg-[#121212] text-white" value={buildingNum} onChange={(e) => setBuildingNum(e.target.value)} />
+                            <input type="text" placeholder={t("complain.floor")} className="input-field w-full p-3 border border-[#C8AD7E] rounded-lg bg-[#121212] text-white" value={floor} onChange={(e) => setFloor(e.target.value)} />
+                            <input type="text" placeholder={t("complain.unitnum")} className="input-field w-full p-3 border border-[#C8AD7E] rounded-lg bg-[#121212] text-white" value={unitNum} onChange={(e) => setUnitNum(e.target.value)} />
+                        </div>
+
                         <select className="input-field w-full p-3 border border-[#C8AD7E] rounded-lg bg-[#121212] text-white" value={service} onChange={(e) => setService(e.target.value)}>
                             <option value="">{t("complain.select_service")}</option>
                             <option value="elevators">{t("complain.elevators")}</option>
@@ -94,16 +107,11 @@ const ComplainForm = () => {
                             <option value="waste_management">{t("complain.waste_management")}</option>
                             <option value="cleaning_services">{t("complain.cleaning_services")}</option>
                             <option value="other">{t("complain.other")}</option>
-
-
                         </select>
+
                         <textarea placeholder={t("complain.description")} className="input-field w-full p-3 border border-[#C8AD7E] rounded-lg bg-[#121212] text-white h-32" value={description} onChange={(e) => setDescription(e.target.value)}></textarea>
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            type="submit"
-                            className="mt-4 px-6 py-3 bg-[#C8AD7E] text-black font-semibold rounded-xl border-2 border-[#C8AD7E] hover:bg-[#D1BB91]"
-                        >
+
+                        <motion.button type="submit" className="mt-4 px-6 py-3 bg-[#C8AD7E] text-black font-semibold rounded-xl">
                             {t("complain.submit")}
                         </motion.button>
                     </motion.form>
