@@ -356,12 +356,32 @@
       "2": {
         "title": "Al Sulaymaniah Villa",
         "category": "Residential"
+      },
+      "3": {
+        "title": "3Bedroom Modern Apartment",
+        "category": "Residential"
+      },
+      "4": {
+        "title": "Modern Najdi Apartment",
+        "category": "Residential"
       }
     }
   },
   "villa": {
     "title": "Marvelous Villa in Al Sulimaniyah District",
     "description": "As you step through the door, a wave of natural light floods the bright and open living space, immediately enveloping you in an atmosphere of sophistication and warmth. The majlis, a true masterpiece of versatility, invites you to effortlessly shape the space to suit any occasion, whether intimate or grand. Surrounding you, luxury sideboards and cabinets in rich brown and olive tones, with their stone-faced panels, offer a timeless elegance, while a carefully curated painting and the Samsung Frame TV, both encased in identical frames, create the illusion of a dual art display. At the center of it all, a bespoke New Zealand wool rug, made exclusively for this space, combined with the handmade metal coffee table, anchor the room with its warmth and understated luxury.",
+    "read_more": "Read More",
+    "read_less": "Read Less"
+  },
+  "modern_apartment": {
+    "title": "3 Bedroom Modern Apartment",
+    "description": "Welcome to this stunning 3-bed, 3-bath furnished apartment in Riyadh’s Hittin District. Embrace luxury living in this timeless sanctuary where opulence meets sophistication. With bespoke furnishings and top-tier materials, every detail exudes elegance. Designed in a neutral palette reminiscent of a magazine cover, this wonderful apartment offers a retreat of unparalleled style. Available for both short and long-term rent, choose from serviced or non-serviced options to suit your lifestyle.",
+    "read_more": "Read More",
+    "read_less": "Read Less"
+  },
+  "modern_najdi_apartment": {
+    "title": "Modern Najdi Apartment",
+    "description": "This elegantly furnished 2-bedroom, 3-bathroom apartment embodies a refined blend of Diriyah-inspired charm and contemporary sophistication. Ideally situated less than 100 meters from Misk City and Misk Schools, it offers seamless access to the Diplomatic Quarter, Laysen Valley, and Diriyah, placing key destinations within easy reach. Designed with a focus on both style and comfort, the residence features spacious living areas, a fully equipped modern kitchen, and thoughtfully curated interiors that exude understated luxury. Every detail has been carefully considered to create a home that is both inviting and effortlessly elegant.",
     "read_more": "Read More",
     "read_less": "Read Less"
   }

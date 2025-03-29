@@ -5,14 +5,19 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const images = [
-  "https://i.ibb.co/KzqB3vBR/Screenshot.png",
-  "https://i.ibb.co/4ZZBsJCn/Screenshot-344.png",
-  "https://i.ibb.co/zTm5Ys0p/Screenshot-343.png",
-  "https://i.ibb.co/5xk8fWr9/Screenshot-341.png",
-  "https://i.ibb.co/kgpFrMQx/Screenshot-31.png",
+  "https://i.ibb.co/hxTKxQh2/DSC00458.jpg",
+  "https://i.ibb.co/Ps58fkxZ/DSC00461.jpg",
+  "https://i.ibb.co/5xhtC1KS/DSC00469.jpg",
+  "https://i.ibb.co/MkJLvSqc/DSC00478.jpg",
+  "https://i.ibb.co/5XqKFbT4/DSC00482.jpg",
+  "https://i.ibb.co/b5QWBCJD/DSC00485.jpg",
+  "https://i.ibb.co/mC5B0QdZ/DSC00489.jpg",
+  "https://i.ibb.co/dwJPMQrm/DSC00491.jpg",
+  "https://i.ibb.co/twt2FzBS/DSC00494.jpg",
+  "https://i.ibb.co/BVPNJgRQ/DSC00499.jpg",
 ];
 
-const ModernApartmentSlider = () => {
+const ModernNajdiApartmentSlider = () => {
   const [expanded, setExpanded] = useState(false);
   const { t } = useTranslation();
 
@@ -38,7 +43,7 @@ const ModernApartmentSlider = () => {
     <section className="bg-[#0c0c0c] text-[#e5d5c5] py-12 px-6 flex flex-col items-center">
       {/* Title */}
       <h2 className="mt-6 text-4xl font-oswald text-center text-[#f8c069] tracking-wide uppercase pt-12">
-        {t("modern_apartment.title")}
+        {t("modern_najdi_apartment.title")}
       </h2>
 
       {/* Slider */}
@@ -61,16 +66,16 @@ const ModernApartmentSlider = () => {
 
       {/* Description with "Read More" button */}
       <p className="text-lg text-[#dcdcdc] leading-relaxed tracking-wide max-w-4xl text-center mt-8">
-        {expanded ? t("modern_apartment.description") : `${t("modern_apartment.description").substring(0, 200)}...`}
+        {expanded ? t("modern_najdi_apartment.description") : `${t("modern_najdi_apartment.description").substring(0, 200)}...`}
       </p>
       <button
         onClick={() => setExpanded(!expanded)}
         className="mt-4 px-4 py-2 bg-[#f8c069] text-[#0c0c0c] rounded-lg text-sm font-semibold hover:bg-[#e0a856] transition"
       >
-        {expanded ? t("modern_apartment.read_less") : t("modern_apartment.read_more")}
+        {expanded ? t("modern_najdi_apartment.read_less") : t("modern_najdi_apartment.read_more")}
       </button>
     </section>
   );
 };
 
-export default ModernApartmentSlider;
+export default ModernNajdiApartmentSlider;

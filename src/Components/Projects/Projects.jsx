@@ -13,6 +13,18 @@ const projects = [
         title: "villa_sulaymaniyah", // Changed to a translation key
         image: "https://i.ibb.co/m5hqLdt5/Screenshot-342.png",
     },
+
+    {
+        id: 3, 
+        title: "modern_apartment.title",  // Translation key instead of hardcoded text
+        image: "https://i.ibb.co/21gfq92Z/IMG-2118.jpg",
+    },
+    { 
+        id: 4, 
+        title: "modern_najdi_apartment.title", // Translation key instead of hardcoded text
+        image: "https://i.ibb.co/hxTKxQh2/DSC00458.jpg",
+    },
+  
 ];
 
 const ProjectsSection = () => {

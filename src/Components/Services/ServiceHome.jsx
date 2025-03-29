@@ -43,7 +43,7 @@ const ServicesSlider = () => {
                 </button>
 
                 <Swiper
-                    dir={isRTL ? "rtl" : "rtl"}
+                    dir={isRTL ? "ltr" : "ltr"}
                     spaceBetween={20}
                     slidesPerView={1}
                     breakpoints={{
