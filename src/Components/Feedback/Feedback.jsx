@@ -31,7 +31,7 @@ const ComplainForm = () => {
         if (!location.trim()) newErrors.location = t("complain.errors.location_required");
         if (!service.trim()) newErrors.service = t("complain.errors.service_required");
         if (!description.trim()) newErrors.description = t("complain.errors.description_required");
-        
+
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
@@ -49,15 +49,15 @@ const ComplainForm = () => {
                 service,
                 description
             };
-            
+
             emailjs.send(
                 "service_sb5lf0w",
                 "template_xxxrppr",
                 templateParams,
                 "lhGvA_l5Z6vT_Pf3f"
             )
-            .then(() => setSubmitted(true))
-            .catch((error) => console.error("Failed to send email:", error));
+                .then(() => setSubmitted(true))
+                .catch((error) => console.error("Failed to send email:", error));
         }
     };
 
@@ -82,10 +82,20 @@ const ComplainForm = () => {
                         <input type="text" placeholder={t("complain.location")} className="input-field w-full p-3 border border-[#C8AD7E] rounded-lg bg-[#121212] text-white" value={location} onChange={(e) => setLocation(e.target.value)} />
                         <select className="input-field w-full p-3 border border-[#C8AD7E] rounded-lg bg-[#121212] text-white" value={service} onChange={(e) => setService(e.target.value)}>
                             <option value="">{t("complain.select_service")}</option>
-                            <option value="real_estate">{t("complain.real_estate")}</option>
-                            <option value="interior_design">{t("complain.interior_design")}</option>
-                            <option value="construction">{t("complain.construction")}</option>
-                            <option value="property_management">{t("complain.property_management")}</option>
+                            <option value="elevators">{t("complain.elevators")}</option>
+                            <option value="hvac">{t("complain.hvac")}</option>
+                            <option value="plumbing">{t("complain.plumbing")}</option>
+                            <option value="cctv">{t("complain.cctv")}</option>
+                            <option value="pest_control">{t("complain.pest_control")}</option>
+                            <option value="security">{t("complain.security")}</option>
+                            <option value="generators">{t("complain.generators")}</option>
+                            <option value="fire_safety_systems">{t("complain.fire_safety_systems")}</option>
+                            <option value="electrical_works">{t("complain.electrical_works")}</option>
+                            <option value="waste_management">{t("complain.waste_management")}</option>
+                            <option value="cleaning_services">{t("complain.cleaning_services")}</option>
+                            <option value="other">{t("complain.other")}</option>
+
+
                         </select>
                         <textarea placeholder={t("complain.description")} className="input-field w-full p-3 border border-[#C8AD7E] rounded-lg bg-[#121212] text-white h-32" value={description} onChange={(e) => setDescription(e.target.value)}></textarea>
                         <motion.button

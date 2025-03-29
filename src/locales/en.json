@@ -141,10 +141,18 @@
     "country": "Country",
     "location": "Location",
     "select_service": "Select a Service",
-    "real_estate": "Real Estate",
-    "interior_design": "Interior Design",
-    "construction": "Construction",
-    "property_management": "Property Management",
+    "elevators": "Elevators",
+    "hvac": "HVAC",
+    "plumbing": "Plumbing",
+    "cctv": "CCTV",
+    "pest_control": "Pest Control",
+    "security": "Security",
+    "generators": "Generators",
+    "fire_safety_systems": "Fire Safety Systems",
+    "electrical_works": "Electrical Works",
+    "waste_management": "Waste Management",
+    "cleaning_services": "Cleaning Services",
+    "other": "Other",
     "description": "Describe your complaint",
     "submit": "Submit",
     "success": "Your complaint has been submitted successfully!",
@@ -350,8 +358,6 @@
         "category": "Residential"
       }
     }
-  
-
   },
   "villa": {
     "title": "Marvelous Villa in Al Sulimaniyah District",
@@ -359,5 +365,4 @@
     "read_more": "Read More",
     "read_less": "Read Less"
   }
-
 }
