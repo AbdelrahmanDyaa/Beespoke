@@ -13,7 +13,7 @@ const AboutUs = () => {
   const toggleExpansion = () => setIsExpanded(!isExpanded);
 
   return (
-    <div className="bg-[#121212] text-[#e5d5c5] font-oswald min-h-screen py-16 px-6 md:px-20 lg:px-32">
+    <div className="bg-dutchWhite text-darkBrown font-oswald min-h-screen py-16 px-6 md:px-20 lg:px-32">
 
       {/* Hero Section */}
       <section className="text-center mb-20 relative mt-10">
@@ -35,39 +35,16 @@ const AboutUs = () => {
       <div className="text-center mb-16">
         <button
           onClick={toggleExpansion}
-          className="text-[#8c826d] text-lg font-semibold hover:text-[#bab09b] transition-colors duration-300 underline"
+          className="text-caféAuLait text-lg font-semibold hover:text-darkBrown transition-colors duration-300 underline"
         >
           {isExpanded ? t("about.read_less") : t("about.read_more")}
         </button>
       </div>
 
 
-      {/* Values Section */}
-      <Suspense fallback={<div>Loading...</div>}>
-        <MotionSection title={t("about.values.title")}>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {t("about.values.items", { returnObjects: true }).map((value, index) => (
-              <div key={index} className="bg-[#2a2a2a] text-[#e5d5c5] p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                <h3 className="text-xl font-semibold text-[#8c826d] mb-4 text-center">
-                  {t(`about.values.labels.${index}`)}
-                </h3>
-                <p>{value}</p>
-              </div>
-            ))}
-          </div>
-        </MotionSection>
-      </Suspense>
-
-      {/* Mission & Vision Sections */}
-      {["mission", "vision"].map((section, index) => (
-        <Suspense key={index} fallback={<div>Loading...</div>}>
-          <MotionSection title={t(`about.${section}.title`)} content={t(`about.${section}.text`)} />
-        </Suspense>
-      ))}
-
       {/* Our Clients Section */}
       <section className="mb-10 text-center">
-        <h2 className="text-4xl text-[#8c826d] mb-12 tracking-wide font-bold uppercase">
+        <h2 className="text-4xl text-espresso mb-12 tracking-wide font-bold uppercase">
           {t("about.clients.title")}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 max-w-7xl mx-auto px-6">
@@ -78,7 +55,7 @@ const AboutUs = () => {
             { title: "about.clients.categories.construction", images: ["https://i.ibb.co/h6vsFHH/rock.png", "https://i.ibb.co/HT0x7gHQ/rimetrica.png"] },
           ].map((section, index) => (
             <div key={index} className="text-center">
-              <h3 className="text-lg sm:text-xl text-[#8c826d] font-semibold mb-6 relative inline-block">
+              <h3 className="text-lg sm:text-xl text-darkBrown font-semibold mb-6 relative inline-block">
                 {t(section.title)}
               </h3>
               <div className="flex flex-wrap justify-center gap-6">

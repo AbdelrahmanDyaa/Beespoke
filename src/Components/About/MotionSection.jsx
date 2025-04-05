@@ -8,9 +8,9 @@ const MotionSection = ({ title, content, children }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="mb-16 max-w-4xl mx-auto text-center bg-[#1a1a1a] p-8 rounded-xl shadow-lg"
+      className="mb-16 max-w-4xl mx-auto text-center bg-tan p-8 rounded-xl shadow-lg"
     >
-      <h2 className="text-3xl text-[#8c826d] mb-6 tracking-wide">{title}</h2>
+      <h2 className="text-3xl text-espresso mb-6 tracking-wide">{title}</h2>
       <p className="text-lg leading-relaxed">{content}</p>
       {children}
     </motion.section>

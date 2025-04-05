@@ -6,6 +6,18 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        beige: "#F5F5DD",
+        dirtyWhite: "#ECE7CA",
+        dutchWhite: "#E3D8B7",
+        darkVanilla: "#DACAA4",
+        tan: "#D1BB91",
+        lightFrenchBeige: "#C8AD7E",
+        khakiWeb: "#C3B091",
+        caféAuLait: "#A67B5B",
+        darkBrown: "#7F5539",
+        espresso: "#4B3621",
+      },
       fontFamily: {
         oswald:  ['Poppins', 'sans-serif'],
         playfair: ['Roboto', 'sans-serif'],

@@ -68,32 +68,32 @@ const ComplainForm = () => {
     };
 
     return (
-        <div className="bg-[#121212] min-h-screen flex items-center justify-center p-6 mt-12">
+        <div className="bg-darkVanilla min-h-screen flex items-center justify-center p-6 mt-12">
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="bg-[#1a1a1a] p-10 rounded-2xl shadow-xl w-full max-w-xl border border-[#C8AD7E]"
+                className="bg-dutchWhite p-10 rounded-2xl shadow-xl w-full max-w-xl border border-tan"
             >
-                <h2 className="text-3xl font-bold text-center mb-6 text-[#C8AD7E]">{t("complain.title")}</h2>
+                <h2 className="text-3xl font-bold text-center mb-6 text-espresso">{t("complain.title")}</h2>
                 {!submitted ? (
                     <motion.form onSubmit={handleSubmit} className="space-y-5">
                         <div className="grid grid-cols-2 gap-4">
-                            <input type="text" placeholder={t("complain.first_name")} className="input-field w-full p-3 border border-[#C8AD7E] rounded-lg bg-[#121212] text-white" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
-                            <input type="text" placeholder={t("complain.last_name")} className="input-field w-full p-3 border border-[#C8AD7E] rounded-lg bg-[#121212] text-white" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+                            <input type="text" placeholder={t("complain.first_name")} className="input-field w-full p-3 border border-tan rounded-lg bg-darkVanilla text-darkBrown placeholder:text-darkBrown" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+                            <input type="text" placeholder={t("complain.last_name")} className="input-field w-full p-3 border border-tan rounded-lg bg-darkVanilla text-darkBrown placeholder:text-darkBrown" value={lastName} onChange={(e) => setLastName(e.target.value)} />
                         </div>
-                        <input type="email" placeholder={t("complain.email")} className="input-field w-full p-3 border border-[#C8AD7E] rounded-lg bg-[#121212] text-white" value={email} onChange={(e) => setEmail(e.target.value)} />
-                        <input type="text" placeholder={t("complain.phone")} className="input-field w-full p-3 border border-[#C8AD7E] rounded-lg bg-[#121212] text-white" value={phone} onChange={(e) => setPhone(e.target.value)} />
-                        <input type="text" placeholder={t("complain.country")} className="input-field w-full p-3 border border-[#C8AD7E] rounded-lg bg-[#121212] text-white" value={country} onChange={(e) => setCountry(e.target.value)} />
-                        <input type="text" placeholder={t("complain.location")} className="input-field w-full p-3 border border-[#C8AD7E] rounded-lg bg-[#121212] text-white" value={location} onChange={(e) => setLocation(e.target.value)} />
+                        <input type="email" placeholder={t("complain.email")} className="input-field w-full p-3 border border-tan rounded-lg bg-darkVanilla text-darkBrown placeholder:text-darkBrown" value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <input type="text" placeholder={t("complain.phone")} className="input-field w-full p-3 border border-tan rounded-lg bg-darkVanilla text-darkBrown placeholder:text-darkBrown" value={phone} onChange={(e) => setPhone(e.target.value)} />
+                        <input type="text" placeholder={t("complain.country")} className="input-field w-full p-3 border border-tan rounded-lg bg-darkVanilla text-darkBrown placeholder:text-darkBrown" value={country} onChange={(e) => setCountry(e.target.value)} />
+                        <input type="text" placeholder={t("complain.location")} className="input-field w-full p-3 border border-tan rounded-lg bg-darkVanilla text-darkBrown placeholder:text-darkBrown" value={location} onChange={(e) => setLocation(e.target.value)} />
 
                         <div className="grid grid-cols-3 gap-4">
-                            <input type="text" placeholder={t("complain.buildingnum")} className="input-field w-full p-3 border border-[#C8AD7E] rounded-lg bg-[#121212] text-white" value={buildingNum} onChange={(e) => setBuildingNum(e.target.value)} />
-                            <input type="text" placeholder={t("complain.floor")} className="input-field w-full p-3 border border-[#C8AD7E] rounded-lg bg-[#121212] text-white" value={floor} onChange={(e) => setFloor(e.target.value)} />
-                            <input type="text" placeholder={t("complain.unitnum")} className="input-field w-full p-3 border border-[#C8AD7E] rounded-lg bg-[#121212] text-white" value={unitNum} onChange={(e) => setUnitNum(e.target.value)} />
+                            <input type="text" placeholder={t("complain.buildingnum")} className="input-field w-full p-3 border border-tan rounded-lg bg-darkVanilla text-darkBrown placeholder:text-darkBrown" value={buildingNum} onChange={(e) => setBuildingNum(e.target.value)} />
+                            <input type="text" placeholder={t("complain.floor")} className="input-field w-full p-3 border border-tan rounded-lg bg-darkVanilla text-darkBrown placeholder:text-darkBrown" value={floor} onChange={(e) => setFloor(e.target.value)} />
+                            <input type="text" placeholder={t("complain.unitnum")} className="input-field w-full p-3 border border-tan rounded-lg bg-darkVanilla text-darkBrown placeholder:text-darkBrown" value={unitNum} onChange={(e) => setUnitNum(e.target.value)} />
                         </div>
 
-                        <select className="input-field w-full p-3 border border-[#C8AD7E] rounded-lg bg-[#121212] text-white" value={service} onChange={(e) => setService(e.target.value)}>
+                        <select className="input-field w-full p-3 border border-tan rounded-lg bg-darkVanilla text-darkBrown placeholder:text-darkBrown" value={service} onChange={(e) => setService(e.target.value)}>
                             <option value="">{t("complain.select_service")}</option>
                             <option value="elevators">{t("complain.elevators")}</option>
                             <option value="hvac">{t("complain.hvac")}</option>
@@ -109,9 +109,9 @@ const ComplainForm = () => {
                             <option value="other">{t("complain.other")}</option>
                         </select>
 
-                        <textarea placeholder={t("complain.description")} className="input-field w-full p-3 border border-[#C8AD7E] rounded-lg bg-[#121212] text-white h-32" value={description} onChange={(e) => setDescription(e.target.value)}></textarea>
+                        <textarea placeholder={t("complain.description")} className="input-field w-full p-3 border border-tan rounded-lg bg-darkVanilla text-darkBrown h-32 placeholder:text-darkBrown" value={description} onChange={(e) => setDescription(e.target.value)}></textarea>
 
-                        <motion.button type="submit" className="mt-4 px-6 py-3 bg-[#C8AD7E] text-black font-semibold rounded-xl">
+                        <motion.button type="submit" className="mt-4 px-6 py-3 bg-tan text-darkBrown font-semibold rounded-xl">
                             {t("complain.submit")}
                         </motion.button>
                     </motion.form>

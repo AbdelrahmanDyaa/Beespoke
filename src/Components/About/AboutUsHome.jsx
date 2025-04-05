@@ -8,24 +8,24 @@ const AboutUsContent = () => {
 
     return (
         <Suspense fallback={<div>Loading...</div>}>
-            <section className="bg-[#0c0c0c] text-[#e5d5c5] py-20 px-6 flex justify-center">
+            <section className="bg-darkVanilla text-darkBrown py-20 px-6 flex justify-center">
                 <div className="max-w-6xl w-full flex flex-col md:flex-row items-center gap-12">
                     {/* Text Section */}
                     <div className="md:w-5/12 text-left">
                         <Link to="/about-us">
-                            <h2 className="text-4xl font-bold font-oswald mb-6 cursor-pointer hover:text-[#bab09b] transition">
+                            <h2 className="text-4xl font-bold font-oswald mb-6 cursor-pointer text-espresso hover:text-darkBrown transition">
                                 {t("about3.title")}
                             </h2>
                         </Link>
-                        <p className="text-lg leading-relaxed font-playfair text-[#cbb8a3]">
+                        <p className="text-lg leading-relaxed font-playfair text-darkBrown ">
                             {t("about3.description1")}
                         </p>
-                        <p className="text-lg mt-4 font-playfair text-[#cbb8a3]">
+                        <p className="text-lg mt-4 font-playfair text-darkBrown">
                             {t("about3.description2")}
                         </p>
                         <Link 
                             to="/contact-us" 
-                            className="inline-block mt-6 px-6 py-3 bg-[#bab09b] text-black font-semibold hover:bg-[#8c826d] transition border-2 border-[#bab09b] font-playfair rounded-md shadow-md hover:shadow-lg"
+                            className="inline-block mt-6 px-6 py-3 bg-darkBrown text-darkVanilla font-semibold hover:bg-espresso transition border-2 border-[#bab09b] font-playfair rounded-md shadow-md hover:shadow-lg"
                         >
                             {t("about3.contact")}
                         </Link>

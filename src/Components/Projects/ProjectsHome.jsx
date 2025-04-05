@@ -25,16 +25,16 @@ const ProjectsSection = () => {
     }, [i18n.language]);
 
     return (
-        <section className="bg-[#0c0c0c] text-[#e5d5c5] py-20 px-6 flex justify-center relative">
+        <section className="bg-darkVanilla text-darkBrown py-20 px-6 flex justify-center relative">
             <div className="max-w-7xl w-full text-start relative">
                 {/* Title */}
-                <h2 className="text-3xl font-oswald mb-6">{t("projects.title")}</h2>
+                <h2 className="text-3xl text-espresso font-oswald mb-6">{t("projects.title")}</h2>
 
                 {/* Navigation Arrows */}
-                <button className="swiper-button-prev-custom absolute top-1/2 left-0 md:left-0 lg:left-[-10px] xl:left-[-38px] z-10 transform -translate-y-1/2 text-[#d1b887] hover:text-[#e5d5c5] transition">
+                <button className="swiper-button-prev-custom absolute top-1/2 left-0 md:left-0 lg:left-[-10px] xl:left-[-38px] z-10 transform -translate-y-1/2 text-darkBrown hover:text-espresso transition">
                     <ChevronLeft size={40} />
                 </button>
-                <button className="swiper-button-next-custom absolute top-1/2 right-0 md:right-0 lg:right-[-10px] xl:right-[-38px] z-10 transform -translate-y-1/2 text-[#d1b887] hover:text-[#e5d5c5] transition">
+                <button className="swiper-button-next-custom absolute top-1/2 right-0 md:right-0 lg:right-[-10px] xl:right-[-38px] z-10 transform -translate-y-1/2 text-darkBrown hover:text-espresso  transition">
                     <ChevronRight size={40} />
                 </button>
 
@@ -66,8 +66,8 @@ const ProjectsSection = () => {
                                 onClick={() => navigate(`/projects/${project.id}`)}
                             />
                             <div className="text-center mt-4">
-                                <h3 className="text-lg font-bold font-oswald text-[#d1b887]">{t(`projects.items.${project.id}.title`)}</h3>
-                                <p className="text-gray-400 text-sm font-playfair">{t(`projects.items.${project.id}.category`)}</p>
+                                <h3 className="text-lg font-bold font-oswald text-darkBrown">{t(`projects.items.${project.id}.title`)}</h3>
+                                <p className="text-caféAuLait text-sm font-playfair">{t(`projects.items.${project.id}.category`)}</p>
                             </div>
                         </SwiperSlide>
                     ))}

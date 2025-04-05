@@ -45,7 +45,7 @@ const ContactUs = () => {
       </motion.div>
 
       {/* Contact Section */}
-      <div className="bg-[#121212] text-[#e5d5c5] py-20 px-6 flex justify-center">
+      <div className="bg-darkVanilla text-darkBrown py-20 px-6 flex justify-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -80,7 +80,7 @@ const ContactUs = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <h2 className="text-4xl font-oswald font-bold mb-6 text-[#8c826d]">
+            <h2 className="text-4xl font-oswald font-bold mb-6 text-espresso">
               {t("contact.title")}
             </h2>
             <p className="mb-2">
@@ -108,7 +108,7 @@ const ContactUs = () => {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder={t("contact.namePlaceholder")}
-                className="w-full border border-[#bab09b] bg-[#0c0c0c] p-3 text-white placeholder-gray-500 rounded-lg focus:ring-2 focus:ring-[#8c826d] focus:outline-none"
+                className="w-full border border-tan bg-dutchWhite p-3 text-espresso placeholder-darkBrown rounded-lg focus:ring-2 focus:ring-darkBrown focus:outline-none"
               />
               <motion.input
                 whileFocus={{ scale: 1.02 }}
@@ -117,7 +117,7 @@ const ContactUs = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder={t("contact.emailPlaceholder")}
-                className="w-full border border-[#bab09b] bg-[#0c0c0c] p-3 text-white placeholder-gray-500 rounded-lg focus:ring-2 focus:ring-[#8c826d] focus:outline-none"
+                className="w-full border border-tan bg-dutchWhite p-3 text-espresso placeholder-darkBrown rounded-lg focus:ring-2 focus:ring-darkBrown focus:outline-none"
               />
               <motion.input
                 whileFocus={{ scale: 1.02 }}
@@ -126,7 +126,7 @@ const ContactUs = () => {
                 value={formData.subject}
                 onChange={handleChange}
                 placeholder={t("contact.subjectPlaceholder")}
-                className="w-full border border-[#bab09b] bg-[#0c0c0c] p-3 text-white placeholder-gray-500 rounded-lg focus:ring-2 focus:ring-[#8c826d] focus:outline-none"
+                className="w-full border border-tan bg-dutchWhite p-3 text-espresso placeholder-darkBrown rounded-lg focus:ring-2 focus:ring-darkBrown focus:outline-none"
               />
               <motion.textarea
                 whileFocus={{ scale: 1.02 }}
@@ -134,7 +134,7 @@ const ContactUs = () => {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder={t("contact.messagePlaceholder")}
-                className="w-full border border-[#bab09b] bg-[#0c0c0c] p-3 text-white placeholder-gray-500 h-32 rounded-lg focus:ring-2 focus:ring-[#8c826d] focus:outline-none"
+                className="w-full border border-tan bg-dutchWhite p-3 text-espresso placeholder-darkBrown h-32 rounded-lg focus:ring-2 focus:ring-darkBrown focus:outline-none"
               ></motion.textarea>
 
               {/* Terms & Conditions */}
@@ -145,7 +145,7 @@ const ContactUs = () => {
                   name="agreed"
                   checked={formData.agreed}
                   onChange={handleChange}
-                  className="mr-2 accent-[#8c826d] w-5 h-5"
+                  className="mr-2 accent-tan w-5 h-5"
                 />
                 <label htmlFor="terms" className="text-sm">
                   {t("contact.terms")}{" "}
@@ -157,7 +157,7 @@ const ContactUs = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 type="submit"
-                className="inline-block mt-6 px-8 py-3 bg-[#bab09b] text-black font-semibold transition border-2 border-[#bab09b] font-playfair hover:bg-[#8c826d] hover:border-[#8c826d] rounded-lg"
+                className="inline-block mt-6 px-8 py-3 bg-tan text-darkBrown font-semibold transition border-2 border-tan font-playfair hover:bg-tan hover:border-darkBrown rounded-lg"
               >
                 {t("contact.sendButton")}
               </motion.button>
