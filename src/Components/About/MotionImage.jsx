@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 
-const MotionImage = ({ src, alt, title, description }) => {
+const MotionImage = ({ src, alt }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -12,11 +12,11 @@ const MotionImage = ({ src, alt, title, description }) => {
       <motion.img
         src={src}
         alt={alt}
-        className="w-full h-[600px] object-cover"
+        className="w-full h-[650px] object-cover"
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.4 }}
       />
-      <div className="absolute inset-0 bg-darkVanilla bg-opacity-80 flex flex-col justify-center items-center p-8">
+      <div className="absolute inset-0 bg-darkVanilla bg-opacity-40 flex flex-col justify-center items-center p-8">
        
        
       </div>
