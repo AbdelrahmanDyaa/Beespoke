@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useState } from "react";
 
 const ContactUs = () => {
-  const { t } = useTranslation(); // Hook for translations
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -12,7 +12,6 @@ const ContactUs = () => {
     agreed: false,
   });
 
-  // Handle input changes
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData({
@@ -21,16 +20,14 @@ const ContactUs = () => {
     });
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Submitted:", formData);
-    // You can integrate an API here to handle form submissions
   };
 
   return (
     <div>
-      {/* Full-width Banner Image */}
+      {/* Banner */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -45,7 +42,7 @@ const ContactUs = () => {
       </motion.div>
 
       {/* Contact Section */}
-      <div className="bg-darkVanilla text-darkBrown py-20 px-6 flex justify-center">
+      <div className="bg-lightBg text-lightText py-20 px-6 flex justify-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -53,7 +50,6 @@ const ContactUs = () => {
           className="max-w-7xl w-full grid md:grid-cols-2 gap-12"
         >
           {/* Google Map */}
-
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -67,12 +63,9 @@ const ContactUs = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-              >
-                
-              </iframe>
+              />
             </div>
           </motion.div>
-
 
           {/* Contact Info & Form */}
           <motion.div
@@ -80,7 +73,7 @@ const ContactUs = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <h2 className="text-4xl font-oswald font-bold mb-6 text-espresso">
+            <h2 className="text-4xl font-oswald font-bold mb-6 text-darkText">
               {t("contact.title")}
             </h2>
             <p className="mb-2">
@@ -93,7 +86,6 @@ const ContactUs = () => {
               <strong>{t("contact.emailLabel")}:</strong> info@bespokehomes.art
             </p>
 
-            {/* Contact Form */}
             <motion.form
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -108,7 +100,7 @@ const ContactUs = () => {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder={t("contact.namePlaceholder")}
-                className="w-full border border-tan bg-dutchWhite p-3 text-espresso placeholder-darkBrown rounded-lg focus:ring-2 focus:ring-darkBrown focus:outline-none"
+                className="w-full border border-highlight bg-backgroundAlt/30 p-3 text-darkText placeholder-subtextLight rounded-lg focus:ring-2 focus:ring-darkText focus:outline-none"
               />
               <motion.input
                 whileFocus={{ scale: 1.02 }}
@@ -117,7 +109,7 @@ const ContactUs = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder={t("contact.emailPlaceholder")}
-                className="w-full border border-tan bg-dutchWhite p-3 text-espresso placeholder-darkBrown rounded-lg focus:ring-2 focus:ring-darkBrown focus:outline-none"
+                className="w-full border border-highlight bg-backgroundAlt/30 p-3 text-darkText placeholder-subtextLight rounded-lg focus:ring-2 focus:ring-darkText focus:outline-none"
               />
               <motion.input
                 whileFocus={{ scale: 1.02 }}
@@ -126,7 +118,7 @@ const ContactUs = () => {
                 value={formData.subject}
                 onChange={handleChange}
                 placeholder={t("contact.subjectPlaceholder")}
-                className="w-full border border-tan bg-dutchWhite p-3 text-espresso placeholder-darkBrown rounded-lg focus:ring-2 focus:ring-darkBrown focus:outline-none"
+                className="w-full border border-highlight bg-backgroundAlt/30 p-3 text-darkText placeholder-subtextLight rounded-lg focus:ring-2 focus:ring-darkText focus:outline-none"
               />
               <motion.textarea
                 whileFocus={{ scale: 1.02 }}
@@ -134,10 +126,9 @@ const ContactUs = () => {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder={t("contact.messagePlaceholder")}
-                className="w-full border border-tan bg-dutchWhite p-3 text-espresso placeholder-darkBrown h-32 rounded-lg focus:ring-2 focus:ring-darkBrown focus:outline-none"
+                className="w-full border border-highlight bg-backgroundAlt/30 p-3 text-darkText placeholder-subtextLight h-32 rounded-lg focus:ring-2 focus:ring-darkText focus:outline-none"
               ></motion.textarea>
 
-              {/* Terms & Conditions */}
               <div className="flex items-center">
                 <input
                   type="checkbox"
@@ -145,7 +136,7 @@ const ContactUs = () => {
                   name="agreed"
                   checked={formData.agreed}
                   onChange={handleChange}
-                  className="mr-2 accent-tan w-5 h-5"
+                  className="mr-2 accent-highlight w-5 h-5"
                 />
                 <label htmlFor="terms" className="text-sm">
                   {t("contact.terms")}{" "}
@@ -157,7 +148,7 @@ const ContactUs = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 type="submit"
-                className="inline-block mt-6 px-8 py-3 bg-tan text-darkBrown font-semibold transition border-2 border-tan font-playfair hover:bg-tan hover:border-darkBrown rounded-lg"
+                className="inline-block mt-6 px-8 py-3 bg-lightText text-subtextDark font-semibold transition border-2 border-accentLight font-playfair hover:bg-darkText hover:border-darkText rounded-lg"
               >
                 {t("contact.sendButton")}
               </motion.button>

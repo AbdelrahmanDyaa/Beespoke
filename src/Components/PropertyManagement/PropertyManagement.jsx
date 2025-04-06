@@ -30,8 +30,8 @@ const PropertyFacilityManagement = () => {
   ];
 
   return (
-    <div className="bg-[#121212] text-[#e5d5c5] font-oswald min-h-screen">
-      {/* هيدر الصفحة */}
+    <div className="bg-darkBg text-lightText font-oswald min-h-screen">
+      {/* 🏠 Page Header */}
       <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[550px]">
         <motion.img
           src="https://i.ibb.co/35jqFJhs/Bespoke-Spaces-Company-Profile-4.jpg"
@@ -43,7 +43,7 @@ const PropertyFacilityManagement = () => {
         />
         <motion.h1
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-          text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-[#d1b887] drop-shadow-lg text-center max-w-[90%]"
+          text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-lightText drop-shadow-lg text-center max-w-[90%] text-subtextDark"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -52,11 +52,11 @@ const PropertyFacilityManagement = () => {
         </motion.h1>
       </div>
 
-      {/* قسم الخدمات */}
+      {/* 🏢 Services Section */}
       <div className="py-16 px-4 sm:px-8 md:px-20 lg:px-32">
         <div className="relative flex flex-col items-center">
           <motion.div
-            className="hidden md:block absolute top-0 w-full border-t-2 border-[#d1b887]"
+            className="hidden md:block absolute top-0 w-full border-t-2 border-lightText"
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
             transition={{ duration: 1.5, ease: "easeInOut" }}
@@ -66,29 +66,28 @@ const PropertyFacilityManagement = () => {
             {services.map((service, index) => (
               <motion.div
                 key={service.key}
-                className="relative flex flex-col items-center text-center bg-[#1a1a1a] p-6 sm:p-8 rounded-2xl shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+                className="relative flex flex-col items-center text-center bg-backgroundAlt/20 p-6 sm:p-8 rounded-2xl shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.3 }}
               >
-                {/* النقطة الدائرية أعلى البطاقة */}
-                <div className="absolute w-8 h-8 sm:w-10 sm:h-10 bg-[#d1b887] rounded-full 
-                  top-[-20px] sm:top-[-30px] left-1/2 transform -translate-x-1/2 border-4 border-[#d1b887]" />
-                
-                {/* عنوان الخدمة */}
-                <h2 className="text-lg sm:text-xl md:text-2xl text-[#d1b887] font-semibold mb-3">
+                {/* 🔹 Circular Indicator */}
+                <div className="absolute w-8 h-8 sm:w-10 sm:h-10 bg-lightText rounded-full top-[-20px] sm:top-[-30px] left-1/2 transform -translate-x-1/2 border-4 border-lightText" />
+
+                {/* 🔸 Service Title */}
+                <h2 className="text-lg sm:text-xl md:text-2xl text-lightText font-semibold mb-3">
                   {t(`propertyFacilityManagement.${service.key}.title`)}
                 </h2>
 
-                {/* وصف الخدمة */}
-                <p className="text-sm sm:text-md text-gray-400 leading-relaxed">
+                {/* 📜 Service Description */}
+                <p className="text-sm sm:text-md text-subtextLight leading-relaxed">
                   {t(`propertyFacilityManagement.${service.key}.description`)}
                 </p>
 
-                {/* قائمة الصيانة */}
+                {/* 🛠 Maintenance List */}
                 {service.maintenanceList && (
                   <motion.div
-                    className="mt-4 text-left text-gray-300"
+                    className="mt-4 text-left text-subtextLight"
                     initial={{ height: "auto" }}
                     animate={{ height: showFullList ? "auto" : "120px" }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
@@ -97,7 +96,7 @@ const PropertyFacilityManagement = () => {
                       {service.maintenanceList
                         .slice(0, showFullList ? service.maintenanceList.length : 4)
                         .map((item) => (
-                          <li key={item} className="hover:text-[#d1b887] transition">
+                          <li key={item} className="hover:text-lightText transition">
                             {t(`propertyFacilityManagement.maintenanceOperations.list.${item}`)}
                           </li>
                         ))}
@@ -107,7 +106,7 @@ const PropertyFacilityManagement = () => {
                       <div className="mt-4 flex justify-center">
                         <motion.button
                           onClick={() => setShowFullList(!showFullList)}
-                          className="px-3 py-1 border border-[#d1b887] text-[#d1b887] text-sm rounded-full hover:bg-[#d1b88730] transition duration-300"
+                          className="px-3 py-1 border border-lightText text-lightText text-sm rounded-full hover:bg-lightText/20 transition duration-300"
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
                         >

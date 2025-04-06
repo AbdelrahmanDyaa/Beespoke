@@ -7,16 +7,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        beige: "#F5F5DD",
-        dirtyWhite: "#ECE7CA",
-        dutchWhite: "#E3D8B7",
-        darkVanilla: "#DACAA4",
-        tan: "#D1BB91",
-        lightFrenchBeige: "#C8AD7E",
-        khakiWeb: "#C3B091",
-        caféAuLait: "#A67B5B",
-        darkBrown: "#7F5539",
-        espresso: "#4B3621",
+        lightBg: "#f2eadf",      // ✅ beige
+        darkBg: "#e6ded3",       // ✅ dirtyWhite
+        lightText: "#7F5539",    // ✅ darkBrown
+        darkText: "#4B3621",     // ✅ espresso
+        accentLight: "#BFA27A",  // 🆕 soft camel
+        accentDark: "#A8906F",   // 🆕 muted mocha
+        subtextLight: "#A97461", // 🆕 warm sienna
+        subtextDark: "#D8C4A0",  // 🆕 warm sand    
+        highlight: "#CBB994",    // 🆕 soft gold
+        backgroundAlt: "#E9DFC4" // 🆕 oatmeal beige
+        
       },
       fontFamily: {
         oswald:  ['Poppins', 'sans-serif'],

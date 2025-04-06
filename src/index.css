@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-    --background-color: #2B2A27; /* Dark Grey */
+    --background-color: #e6ded3; /* Dark Grey */
     --foreground-color: #F5F3EE; /* Off-white */
     --accent-1: #C49A6C; /* Golden Brown */
     --accent-2: #D8B384; /* Lighter Gold */

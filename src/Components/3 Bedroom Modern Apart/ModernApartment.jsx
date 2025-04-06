@@ -14,7 +14,6 @@ const images = [
     "https://i.ibb.co/xKzh1xt2/IMG-2187.jpg",
     "https://i.ibb.co/VWxnk1wg/IMG-2189.jpg",
     "https://i.ibb.co/V03tt4Vs/IMG-2194.jpg",
-
 ];
 
 const ModernApartmentSlider = () => {
@@ -40,9 +39,9 @@ const ModernApartmentSlider = () => {
     };
 
     return (
-        <section className="bg-[#0c0c0c] text-[#e5d5c5] py-12 px-6 flex flex-col items-center">
+        <section className="bg-darkBg text-lightText py-12 px-6 flex flex-col items-center">
             {/* Title */}
-            <h2 className="mt-6 text-4xl font-oswald text-center text-[#f8c069] tracking-wide uppercase pt-12">
+            <h2 className="mt-6 text-4xl font-oswald text-darkText text-center tracking-wide uppercase pt-12">
                 {t("modern_apartment.title")}
             </h2>
 
@@ -65,12 +64,12 @@ const ModernApartmentSlider = () => {
             </div>
 
             {/* Description with "Read More" button */}
-            <p className="text-lg text-[#dcdcdc] leading-relaxed tracking-wide max-w-4xl text-center mt-8">
+            <p className="text-lg text-subtextLight leading-relaxed tracking-wide max-w-4xl text-center mt-8">
                 {expanded ? t("modern_apartment.description") : `${t("modern_apartment.description").substring(0, 200)}...`}
             </p>
             <button
                 onClick={() => setExpanded(!expanded)}
-                className="mt-4 px-4 py-2 bg-[#f8c069] text-[#0c0c0c] rounded-lg text-sm font-semibold hover:bg-[#e0a856] transition"
+                className="mt-4 px-4 py-2 bg-accentLight text-darkText rounded-lg text-sm font-semibold hover:bg-accentDark transition"
             >
                 {expanded ? t("modern_apartment.read_less") : t("modern_apartment.read_more")}
             </button>

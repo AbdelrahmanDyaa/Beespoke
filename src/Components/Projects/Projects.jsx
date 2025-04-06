@@ -32,11 +32,11 @@ const ProjectsSection = () => {
     const { t } = useTranslation(); // Import translation hook
 
     return (
-        <section className="bg-darkVanilla text-espresso py-20 px-6 flex justify-center mt-12">
+        <section className="bg-lightBg text-darkText py-20 px-6 flex justify-center mt-12">
             <div className="max-w-7xl w-full">
                 {/* Header */}
                 <motion.h2
-                    className="text-4xl font-oswald mb-12 text-center text-espresso tracking-wide uppercase"
+                    className="text-4xl font-oswald mb-12 text-center text-lightText tracking-wide uppercase"
                     initial={{ opacity: 0, y: -30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
@@ -57,7 +57,7 @@ const ProjectsSection = () => {
                     {projects.map((project) => (
                         <motion.div
                             key={project.id}
-                            className="cursor-pointer bg-dutchWhite rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]"
+                            className="cursor-pointer bg-backgroundAlt/30 rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] hover:bg-accentDark"
                             onClick={() => navigate(`/projects/${project.id}`)}
                         >
                             {/* Image */}
@@ -69,7 +69,7 @@ const ProjectsSection = () => {
 
                             {/* Content */}
                             <div className="p-6 text-center">
-                                <h3 className="text-xl font-bold font-oswald text-darkBrown transition-all duration-300 hover:text-espresso">
+                                <h3 className="text-xl font-bold font-oswald text-lightText transition-all duration-300 hover:text-espresso">
                                     {t(project.title)}
                                 </h3>
                             </div>

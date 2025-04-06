@@ -27,7 +27,7 @@ const Slider = () => {
     };
 
     return (
-        <section className="relative h-screen flex justify-center items-center bg-black overflow-hidden">
+        <section className="relative h-screen flex justify-center items-center bg-darkBg overflow-hidden">
             {/* Clickable Container */}
             <div
                 className="relative w-full h-full flex justify-center items-center cursor-pointer"
@@ -48,15 +48,15 @@ const Slider = () => {
                 </AnimatePresence>
 
                 {/* Dark Overlay for Readability */}
-                <div className="absolute inset-0 bg-black bg-opacity-50" />
+                <div className="absolute inset-0 bg-darkBg bg-opacity-50" />
 
                 {/* Overlay Text (Also Clickable) */}
                 <div
                     className={`font-oswald absolute top-1/2 ${isRTL ? "right-10 md:right-16 lg:right-24 text-right" : "left-10 md:left-16 lg:left-24 text-left"} 
-                    transform -translate-y-1/2 text-white max-w-2xl`}
+                    transform -translate-y-1/2 text-darkText max-w-2xl`}
                 >
                     <h1
-                        className="text-5xl md:text-7xl font-bold leading-tight drop-shadow-lg transition duration-300 hover:text-gray-300"
+                        className=" text-darkText text-5xl md:text-7xl font-bold leading-tight drop-shadow-lg transition duration-300 hover:text-lightText"
                         onClick={handleSlideClick}
                     >
                         {slides[currentIndex].title}

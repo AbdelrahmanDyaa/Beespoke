@@ -16,7 +16,7 @@ const MotionImage = ({ src, alt }) => {
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.4 }}
       />
-      <div className="absolute inset-0 bg-darkVanilla bg-opacity-40 flex flex-col justify-center items-center p-8">
+      <div className="absolute inset-0 bg-lightBg bg-opacity-20 flex flex-col justify-center items-center p-8">
        
        
       </div>

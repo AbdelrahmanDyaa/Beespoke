@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom"; 
 import { useTranslation } from "react-i18next"; 
 
-
 const services = [
   { 
     id: 1, 
@@ -34,12 +33,11 @@ const services = [
   }
 ];
 
-
 const Services = () => {
   const { t } = useTranslation(); 
 
   return (
-    <div className="bg-[#121212] text-[#e5d5c5] font-oswald min-h-screen py-10 px-4 md:px-16 lg:px-24">
+    <div className="bg-darkBg text-lightText font-oswald min-h-screen py-10 px-4 md:px-16 lg:px-24">
       {/* Hero Section */}
       <section className="text-center mb-12 mt-6 relative">
         <motion.div
@@ -61,7 +59,7 @@ const Services = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#8c826d] mb-4 tracking-wide drop-shadow-lg"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold text-accentLight mb-4 tracking-wide drop-shadow-lg"
             >
               {t("services.our_services")}
             </motion.h1>
@@ -86,7 +84,7 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-[#1a1a1a] p-6 sm:p-8 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300 hover:shadow-xl"
+              className="bg-darkBg p-6 sm:p-8 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300 hover:shadow-xl hover:bg-accentDark"
             >
               <motion.img 
                 src={service.src} 
@@ -95,10 +93,10 @@ const Services = () => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               />
-              <h2 className="text-2xl sm:text-3xl text-[#8c826d] mb-3 font-semibold">
+              <h2 className="text-2xl sm:text-3xl text-accentLight mb-3 font-semibold">
                 {t(service.titleKey)} 
               </h2>
-              <p className="text-sm sm:text-base leading-relaxed text-gray-400">
+              <p className="text-sm sm:text-base leading-relaxed text-subtextDark">
                 {t(service.descriptionKey)}
               </p>
             </motion.div>

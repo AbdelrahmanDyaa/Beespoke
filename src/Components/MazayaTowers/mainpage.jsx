@@ -5,17 +5,17 @@ const MainPage = () => {
   const { t } = useTranslation(); // Import translation hook
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 bg-[#0c0c0c] text-[#e5d5c5] mt-20">
+    <section className="min-h-screen flex items-center justify-center px-6 bg-darkBg text-lightText mt-20">
       <div className="max-w-5xl w-full">
         <motion.div
-          className="p-12 bg-[#1a1a1a] rounded-3xl shadow-lg transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]"
+          className="p-12 bg-backgroundAlt/30 rounded-3xl shadow-lg transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
           {/* Title */}
           <motion.h3
-            className="text-5xl font-bold text-[#f8c069] mb-6 text-center tracking-wide"
+            className="text-5xl font-bold text-darkText mb-6 text-center tracking-wide"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -25,7 +25,7 @@ const MainPage = () => {
 
           {/* Divider */}
           <motion.div
-            className="w-20 h-1 bg-[#f8c069] mx-auto mb-8 rounded-full"
+            className="w-20 h-1 bg-darkText mx-auto mb-8 rounded-full"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -51,7 +51,7 @@ const MainPage = () => {
             {/* Right Side - Description */}
             <div>
               <motion.p
-                className="text-lg text-[#dcdcdc] leading-relaxed tracking-wide"
+                className="text-lg text-lightText leading-relaxed tracking-wide"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -59,7 +59,7 @@ const MainPage = () => {
                 {t("mazaya_description_1")}
               </motion.p>
               <motion.p
-                className="text-lg text-[#dcdcdc] leading-relaxed tracking-wide mt-4"
+                className="text-lg text-lightText leading-relaxed tracking-wide mt-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.7 }}
@@ -67,7 +67,7 @@ const MainPage = () => {
                 {t("mazaya_description_2")}
               </motion.p>
               <motion.p
-                className="text-lg text-[#dcdcdc] leading-relaxed tracking-wide mt-4"
+                className="text-lg text-lightText leading-relaxed tracking-wide mt-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
