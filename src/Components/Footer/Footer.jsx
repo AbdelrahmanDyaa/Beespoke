@@ -51,7 +51,7 @@ const Footer = () => {
                 {/* Footer Bottom */}
                 <div className="max-w-7xl mx-auto border-t border-darkText mt-8 py-4 text-center">
                     <p className="text-sm text-darkText">
-                        &copy; {new Date().getFullYear()} Bespoke Homes. {t("footer.rights")}
+                        &copy; {new Date().getFullYear()} Bespoke Spaces. {t("footer.rights")}
                     </p>
                 </div>
             </footer>
