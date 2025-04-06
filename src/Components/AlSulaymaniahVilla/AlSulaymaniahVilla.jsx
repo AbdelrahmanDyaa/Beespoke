@@ -38,7 +38,7 @@ const ModernApartmentSlider = () => {
     <section className="bg-darkBg text-lightText py-12 px-6 flex flex-col items-center">
       {/* Title */}
       <h2 className="mt-6 text-4xl font-oswald text-center text-darkText tracking-wide uppercase pt-12">
-        {t("modern_apartment.title")}
+        {t("villa.title")}
       </h2>
 
       {/* Slider */}
@@ -61,13 +61,13 @@ const ModernApartmentSlider = () => {
 
       {/* Description with "Read More" button */}
       <p className="text-lg text-subtextLight leading-relaxed tracking-wide max-w-4xl text-center mt-8">
-        {expanded ? t("modern_apartment.description") : `${t("modern_apartment.description").substring(0, 200)}...`}
+        {expanded ? t("villa.description") : `${t("villa.description").substring(0, 200)}...`}
       </p>
       <button
         onClick={() => setExpanded(!expanded)}
         className="mt-4 px-4 py-2 bg-accentLight text-darkText rounded-lg text-sm font-semibold hover:bg-accentDark transition"
       >
-        {expanded ? t("modern_apartment.read_less") : t("modern_apartment.read_more")}
+        {expanded ? t("villa.read_less") : t("villa.read_more")}
       </button>
     </section>
   );
