@@ -53,7 +53,7 @@ const Navbar = () => {
     <div className="flex items-center gap-4">
       <Link to="/" className="h-16 flex items-center" onClick={handleNavClick}>
         <img
-          src="https://i.ibb.co/C3KLkcnf/oie-NDwf-Mv-VWuz-Nl.png"
+          src="https://i.ibb.co/r2WcrxXj/transparent.png"
           alt="Logo"
           className="w-20 md:w-26 lg:w-30 h-auto object-contain inline-block transition-transform duration-300 hover:scale-105"
         />
