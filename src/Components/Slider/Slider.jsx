@@ -48,7 +48,7 @@ const Slider = () => {
                 </AnimatePresence>
 
                 {/* Dark Overlay for Readability */}
-                <div className="absolute inset-0 bg-darkBg bg-opacity-50" />
+                <div className="absolute inset-0 bg-darkBg bg-opacity-30" />
 
                 {/* Overlay Text (Also Clickable) */}
                 <div
