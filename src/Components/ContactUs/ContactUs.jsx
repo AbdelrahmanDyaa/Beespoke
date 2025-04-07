@@ -26,7 +26,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="bg-lightBg text-lightText py-20 px-6 flex justify-center ">
+    <div className="bg-lightBg text-lightText py-20 px-6 flex justify-center  mt-10">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
