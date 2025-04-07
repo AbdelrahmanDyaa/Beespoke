@@ -10,7 +10,7 @@ const Layout = () => {
     document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
 
     return (
-        <div className="bg-darkBg text-lightText">
+        <div className="bg-darkBg text-lightText pt-12">
             <Navbar />
             <Outlet />
             <Footer />
