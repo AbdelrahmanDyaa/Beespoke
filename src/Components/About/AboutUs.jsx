@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { useTranslation } from "react-i18next";
+import { Target, ChartNoAxesCombined  } from "lucide-react"; // 👈 Added Eye icon for Vision
 
 // Lazy Load Components
 const MotionSection = lazy(() => import("./MotionSection"));
@@ -41,35 +42,45 @@ const AboutUs = () => {
           <h2 className="text-4xl md:text-5xl text-darkText font-bold uppercase tracking-widest animate-fadeInUp">
             {t("about.vision_mission.title")}
           </h2>
-          
+
           <p className="text-darkBrown text-lg md:text-xl mt-4 max-w-2xl mx-auto font-light animate-fadeIn">
             {t("about.vision_mission.description")}
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-darkBrown">
-          {/* Vision Card */}
-          <div className="group bg-backgroundAlt/30 backdrop-blur-lg p-10 rounded-3xl border border-accentLight shadow-lg hover:shadow-2xl hover:scale-[1.03] transition duration-500 relative overflow-hidden">
-            <h3 className="text-2xl font-bold mb-4 tracking-wide">
-              {t("about.vision_mission.vision")}
-            </h3>
-            <p className="text-base md:text-lg leading-relaxed font-medium">
-              {t("about.vision_mission.details.vision")}
-            </p>
-            <div className="absolute top-0 right-0 w-24 h-24 bg-caféAuLait opacity-10 rounded-bl-full"></div>
-          </div>
+  {/* Vision Card */}
+  <div className="group bg-backgroundAlt/30 backdrop-blur-lg p-10 rounded-3xl border border-accentLight shadow-lg hover:shadow-2xl hover:scale-[1.03] transition duration-500 relative overflow-hidden flex flex-col items-center text-center">
+    {/* Icon */}
+    <div className="flex justify-center items-center mb-6">
+      <ChartNoAxesCombined className="h-20 w-20 text-caféAuLait" />
+    </div>
 
-          {/* Mission Card */}
-          <div className="group bg-backgroundAlt/30 backdrop-blur-lg p-10 rounded-3xl border border-accentLight shadow-lg hover:shadow-2xl hover:scale-[1.03] transition duration-500 relative overflow-hidden">
-            <h3 className="text-2xl font-bold mb-4 tracking-wide">
-              {t("about.vision_mission.mission")}
-            </h3>
-            <p className="text-base md:text-lg leading-relaxed font-medium">
-              {t("about.vision_mission.details.mission")}
-            </p>
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-caféAuLait opacity-10 rounded-tr-full"></div>
-          </div>
-        </div>
+    <h3 className="text-3xl font-bold mb-4 tracking-wide">
+      {t("about.vision_mission.vision")}
+    </h3>
+    <p className="text-base md:text-lg leading-relaxed font-medium">
+      {t("about.vision_mission.details.vision")}
+    </p>
+    <div className="absolute top-0 right-0 w-24 h-24 bg-caféAuLait opacity-10 rounded-bl-full"></div>
+  </div>
+
+  {/* Mission Card */}
+  <div className="group bg-backgroundAlt/30 backdrop-blur-lg p-10 rounded-3xl border border-accentLight shadow-lg hover:shadow-2xl hover:scale-[1.03] transition duration-500 relative overflow-hidden flex flex-col items-center text-center">
+    {/* Icon */}
+    <div className="flex justify-center items-center mb-6">
+      <Target className="h-20 w-20 text-caféAuLait" />
+    </div>
+
+    <h3 className="text-3xl font-bold mb-4 tracking-wide">
+      {t("about.vision_mission.mission")}
+    </h3>
+    <p className="text-base md:text-lg leading-relaxed font-medium">
+      {t("about.vision_mission.details.mission")}
+    </p>
+    <div className="absolute bottom-0 left-0 w-24 h-24 bg-caféAuLait opacity-10 rounded-tr-full"></div>
+  </div>
+</div>
+
       </section>
 
       {/* Our Clients Section */}
