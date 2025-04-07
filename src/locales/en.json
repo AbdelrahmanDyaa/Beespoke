@@ -88,13 +88,9 @@
   "about": {
     "hero_alt": "Company Hero Image",
     "title": "About Us",
-    "description": "We are a premier real estate company dedicated to providing top-notch services in property management, construction, and facility maintenance.",
+    "description": "Bespoke Spaces specializes in creating sophisticated, tailor-made environments through a full spectrum of real estate and design services—from development and construction to interior design and facility management. With a focus on innovation, precision, and storytelling through space, the team transforms visions into exceptional, functional, and luxurious realities.",
     "company_overview": {
-      "title": "Company Overview",
-      "points": [
-        "Bespoke Spaces offers end-to-end real estate and design solutions, combining innovation, functionality, and luxury—from property acquisition to personalized interior design and management, all tailored to your unique vision.",
-        "With a commitment to excellence, their expert team blends cutting-edge technology with craftsmanship to create elegant, comfortable, and distinctive spaces that reflect individuality."
-      ]
+      "title": "Company Overview"
     },
     "clients": {
       "title": "Some of Our Clients",
@@ -104,6 +100,17 @@
         "facility_management": "Facility Management",
         "construction": "Construction"
       }
+    },
+    "vision_mission": {
+      "title": "Our Vision & Mission",
+      "vision": "Our Vision",
+      "mission": "Our Mission",
+      "description": "Discover what drives us to redefine excellence in real estate and design.",
+      "details": {
+        "vision": "To be the leading provider of bespoke real estate solutions, integrating design, construction, and facility management with innovation and excellence.",
+        "mission": "To transform aspirations into reality by delivering bespoke real estate solutions that integrate design, construction, and facility management, ensuring functionality, efficiency, and excellence in every project."
+      }
+
     }
   },
   "complain": {
@@ -240,8 +247,8 @@
   },
   "about3": {
     "title": "ABOUT US",
-    "description1": "We are a premium real estate and interior design company dedicated to crafting bespoke spaces.",
-    "description2": "Our team is dedicated to providing the best services.",
+    "description1": "Bespoke Spaces delivers luxurious, expertly crafted real estate and design solutions that blend innovation, functionality, and personalized elegance.",
+    "description2": "",
     "contact": "Contact Us",
     "more_about_us": "More About Us"
   },
@@ -298,7 +305,7 @@
   },
   "footer": {
     "about_us": "About Us",
-    "about_us_text": "We are a premium real estate and interior design company dedicated to crafting bespoke spaces.",
+    "about_us_text": "Bespoke Spaces delivers luxurious, expertly crafted real estate and design solutions that blend innovation, functionality, and personalized elegance.",
     "learn_more": "Learn More",
     "contact_us": "Contact Us",
     "email": "Email",
