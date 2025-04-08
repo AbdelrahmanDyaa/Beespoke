@@ -32,7 +32,7 @@ const ProjectsSection = () => {
     const { t } = useTranslation(); // Import translation hook
 
     return (
-        <section className="bg-lightBg text-darkText py-20 px-6 flex justify-center mt-12">
+        <section className="bg-lightBg text-darkText py-20 px-6 flex justify-center ">
             <div className="max-w-7xl w-full">
                 {/* Header */}
                 <motion.h2
